@@ -1,0 +1,9 @@
+[submodule "shared"]
+	path = shared
+	url = ./shared
+[submodule "backend"]
+	path = backend
+	url = ./backend
+[submodule "frontend"]
+	path = frontend
+	url = ./frontend
