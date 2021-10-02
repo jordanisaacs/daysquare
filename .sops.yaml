@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: backend/[^/]+\.ya?ml$
+    age: 'age1d589ex6p7flgq8uz837mnyt7vx7evwdaa08fs8hwe2sndcamjgqqvlf62u'
