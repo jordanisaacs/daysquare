@@ -14,7 +14,7 @@
       db_password = "daysquare";
       db_port = 5432;
       db_name = "daysquare";
-      container_name = "test-db";
+      container_name = "dev-db";
       system = "x86_64-linux";
       naersk-lib = naersk.lib."${system}";
       overlays = [ (import rust-overlay) (sops-nix.overlay) ];
@@ -22,20 +22,21 @@
         inherit system overlays;
       };
 
+      sqlsConfigFile = ''
+        lowercaseKeywords: false
+        connections:
+          - alias: dsn_daysquare
+            driver: postgresql
+            proto: tcp
+            user: ${db_user}
+            passwd: ${db_password}
+            dbName: ${db_name}
+            host: ${container_name}
+            port: ${builtins.toString db_port}
+      '';
+
     in
     rec {
-      #packages.daysquare = naersk-lib.buildPackage {
-      #  pname = "daysquare";
-      #  root = ./.;
-      #};
-
-      #defaultPackage.${system} = packages.daysquare;
-
-      #apps.${system}.daysquare = utils.lib.mkApp {
-      #  drv = packages.daysquare;
-      #};
-      #defaultApp.${system} = apps.daysquare;
-
       devShell."${system}" = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
           # build inputs
@@ -47,7 +48,7 @@
 
           # rust
           (rust-bin.stable.latest.default.override {
-            targets = [ "wasm32-unknown-unknown" ];
+            targets = [ "wasm32-unknown-unknown" "x86_64-unknown-linux-gnu" ];
           })
           cargo
 
@@ -67,6 +68,8 @@
         ];
 
         shellHook = ''
+          rm ./backend/config.yml
+          echo ${"'" + sqlsConfigFile + "'"} > ./backend/config.yml
           sudo nixos-container destroy ${container_name}
           sudo nixos-container create ${container_name} --flake ".#db"
           sudo nixos-container start ${container_name}
