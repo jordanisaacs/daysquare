@@ -7,3 +7,9 @@
 [submodule "frontend"]
 	path = frontend
 	url = ./frontend
+[submodule "redact-crypto"]
+	path = redact-crypto
+	url = ./redact-crypto
+[submodule "redact-store"]
+	path = redact-store
+	url = ./redact-store
