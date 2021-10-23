@@ -15,6 +15,22 @@
         "type": "github"
       }
     },
+    "mongofix": {
+      "locked": {
+        "lastModified": 1634270806,
+        "narHash": "sha256-9aDdu9s9Vz9UXGnMrtkUmZVtIBJhP65oSZGv0AIAqlI=",
+        "owner": "jordanisaacs",
+        "repo": "nixpkgs",
+        "rev": "6ff6ccfa2504f544f3f42f44339366db4b87a7f2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jordanisaacs",
+        "ref": "mongodb-portfix",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "naersk": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -96,6 +112,7 @@
     },
     "root": {
       "inputs": {
+        "mongofix": "mongofix",
         "naersk": "naersk",
         "nixpkgs": "nixpkgs_2",
         "rust-overlay": "rust-overlay",
