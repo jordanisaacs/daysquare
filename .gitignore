@@ -1,1 +1,4 @@
 /.tmp
+/target
+/redactclient-log.txt
+/redactstore-log.txt

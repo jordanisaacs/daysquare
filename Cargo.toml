@@ -3,5 +3,7 @@
 members = [
   "shared",
   "frontend",
-  "backend"
+  "backend",
+  "redact-store",
+  "redact-client",
 ]

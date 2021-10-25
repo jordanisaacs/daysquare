@@ -7,3 +7,9 @@
 [submodule "frontend"]
 	path = frontend
 	url = ./frontend
+[submodule "redact-store"]
+	path = redact-store
+	url = https://github.com/pauwels-labs/redact-store
+[submodule "redact-client"]
+	path = redact-client
+	url = https://github.com/pauwels-labs/redact-client
