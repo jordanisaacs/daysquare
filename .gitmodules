@@ -1,12 +1,3 @@
-[submodule "shared"]
-	path = shared
-	url = ./shared
-[submodule "backend"]
-	path = backend
-	url = ./backend
-[submodule "frontend"]
-	path = frontend
-	url = ./frontend
 [submodule "redact-store"]
 	path = redact-store
 	url = https://github.com/pauwels-labs/redact-store
