@@ -17,11 +17,11 @@
     },
     "mongofix": {
       "locked": {
-        "lastModified": 1634270806,
-        "narHash": "sha256-9aDdu9s9Vz9UXGnMrtkUmZVtIBJhP65oSZGv0AIAqlI=",
+        "lastModified": 1635290119,
+        "narHash": "sha256-PSaiqksYrcnTNPbB03VaBPnH7RiQUg0Au2/sjnM0VUk=",
         "owner": "jordanisaacs",
         "repo": "nixpkgs",
-        "rev": "6ff6ccfa2504f544f3f42f44339366db4b87a7f2",
+        "rev": "2cb03c0a0d2ad89bab50dc2ceb515d3f8ca15a63",
         "type": "github"
       },
       "original": {

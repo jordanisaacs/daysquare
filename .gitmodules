@@ -4,3 +4,12 @@
 [submodule "redact-client"]
 	path = redact-client
 	url = https://github.com/pauwels-labs/redact-client
+[submodule "daysquare-shared"]
+	path = daysquare-shared
+	url = https://github.com/jordanisaacs/daysquare-shared
+[submodule "daysquare-backend"]
+	path = daysquare-backend
+	url = https://github.com/jordanisaacs/daysquare-backend
+[submodule "daysquare-frontend"]
+	path = daysquare-frontend
+	url = https://github.com/jordanisaacs/daysquare-frontend
